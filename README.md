@@ -5,11 +5,16 @@ Vertical wind turbine sandbox simulating the averaged torque on a three-blade ve
 ## Project content
 
 This simulation sandbox allows the user to set most of the simulation parameters: The number of setting simulated, the wind speed range, the turbine speed range, the blade tilt angle range and the dimension of the turbine. The project includes 4 python script and 1 data file necessary for a proper execution:
-- naca_profile3.xml: This file contains all the drift and lift coefficients curves of the naca profiles, provided in a free version by Heliciel (the data are not really accurate),
-- xmlHandling.py:
-- Foiler.py:
-- analyseOutput.py:
-- main.py:
+- naca_profile3.xml: This file contains all the drift and lift coefficients curves of the naca profiles, provided in a free version by Heliciel (the data are not really accurate). 
+
+The database is detailed at: https://www.heliciel.com/aerodynamique-hydrodynamique/base%20de%20donnee%20profils%20aerodynamique%20hydrodynamique.htm.
+
+The database itself is available at: https://www.heliciel.com/bases%20performances%20profils/naca_heliciel3.zip,
+
+- xmlHandling.py: This script provide the functions to read the xml database of naca foiler profiles. These function are used by the other scripts.
+- Foiler.py: This script defines the physic engine class for the vertical turbine,
+- analyseOutput.py: This script analyse the output file of the simulation. It better works for a grid a results.
+- main.py: This is the main script of the sandbox to launch in command line. It run an user interface to change the setting of the simulation and display the results as it runs. 
 
 ![view](https://user-images.githubusercontent.com/57091666/153756461-8a288f40-5271-40f0-9cd5-072c283c018c.png)
 
